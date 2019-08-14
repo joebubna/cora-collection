@@ -3,7 +3,7 @@
 ## Basic Usage
 
 ### Flexible interface that allows you to use your favorite format
-```
+```php
 $collection = new \Cora\Collection();
 $collection->add('Hello World');
 echo $collection->get(0);       // Outputs "Hello World"
@@ -13,7 +13,7 @@ echo $collection->off0;         // Outputs "Hello World"
 ```
 
 ### Easily filter contents using WHERE method
-```
+```php
 $collection = new \Cora\Collection([
     new \Classes\Event('Debit', '10/10/1980'),
     new \Classes\Event('Debit', '10/10/2001'),
@@ -30,7 +30,7 @@ $this->assertEquals(4, count($collection->where('timestamp', new \DateTime('01/0
 
 ### Can set an object property or associative array key as the primary for access
 Here we pass in "name" as the second constructor argument:
-```
+```php
 $collection = new \Cora\Collection([
     new \Classes\User('User1', 'Type1'),
     new \Classes\User('User2', 'Type1'),
